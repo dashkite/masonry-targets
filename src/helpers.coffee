@@ -4,7 +4,6 @@ import * as Glob from "fast-glob"
 
 Template =
 
-  # TODO migrate into Joy
   expand: ( template, context ) ->
     parameters = Object.keys context
     f = new Function "{#{ parameters }}", "return `#{ template }`"
