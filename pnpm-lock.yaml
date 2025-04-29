@@ -30,6 +30,9 @@ importers:
       '@dashkite/assert':
         specifier: ^0.1.4
         version: 0.1.4
+      '@dashkite/vista':
+        specifier: link:../vista
+        version: link:../vista
       '@swc/cli':
         specifier: ^0.1.62
         version: 0.1.65(@swc/core@1.11.7)
