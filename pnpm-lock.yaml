@@ -31,11 +31,8 @@ importers:
         specifier: ^0.1.4
         version: 0.1.4
       '@dashkite/genie-release':
-        specifier: link:../genie-release
-        version: link:../genie-release
-      '@dashkite/vista':
-        specifier: link:../vista
-        version: link:../vista
+        specifier: ^0.2.0
+        version: 0.2.0
       '@swc/cli':
         specifier: ^0.1.62
         version: 0.1.65(@swc/core@1.11.7)
@@ -546,8 +543,14 @@ packages:
   '@dashkite/assert@0.1.4':
     resolution: {integrity: sha512-OLOzI/lA+EwCh6znSexGAG1V4bkaT5gU04xl6ApEluv5jICnHhinZ707MObu+jhVVJ9uHDDlG85O+Afn1aTQoQ==}
 
+  '@dashkite/genie-release@0.2.0':
+    resolution: {integrity: sha512-ySaAzJw7FfpF+lIomBjQm1s8rcrCDl29h6p0Wyaa6Br/FdIFyDbc8CRJKS8BnxMqN5sEN3J/qE/t7QNk7mZMKw==}
+
   '@dashkite/joy@0.3.16':
     resolution: {integrity: sha512-dsU0us4j1Pb+zceoBvLbnZ2PbmULkJUtM2vtWLxKmoc1DE4w9SVTiPTe6JWvF0A0vk90ldv+Lc9qEA5x3O+DtQ==}
+
+  '@dashkite/zephyr@0.2.0':
+    resolution: {integrity: sha512-l3Fm9nyOIp1yBnv4IzGOKVgo1/UucU5WLvsqAfcP2jEVlE4AgpPkODssyloxTyC3N+bhcz1DXqC/7KokI1eVjA==}
 
   '@jridgewell/gen-mapping@0.3.8':
     resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
@@ -705,6 +708,9 @@ packages:
 
   arch@2.2.0:
     resolution: {integrity: sha512-Of/R0wqp83cgHozfIYLbBMnej79U/SVGOOyuB3VVFv1NRM/PSFMK12x9KVtiYzJqmnU5WR2qp0Z5rHb7sWGnFQ==}
+
+  argparse@2.0.1:
+    resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
   babel-plugin-autocomplete-index@0.2.0:
     resolution: {integrity: sha512-5HdUxzQn6ho/Bd2XCfUMdrMZUaQ/lhtpqB9TluKL/V+38HdNPyDUNWqOOZk6hDLs4ktVgiUbZvm5N/0euDABKA==}
@@ -986,6 +992,10 @@ packages:
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+
+  js-yaml@4.1.0:
+    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
+    hasBin: true
 
   jsesc@3.0.2:
     resolution: {integrity: sha512-xKqzzWXDttJuOcawBt4KnKHHIf5oQ/Cxax+0PWFG+DFDgHNAdi+TXECADI+RYiFUMmx8792xsMbbgXj4CwnP4g==}
@@ -1318,6 +1328,11 @@ packages:
 
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
+
+  zx@8.6.1:
+    resolution: {integrity: sha512-ig4Gn2e3L9QaQq3OsyDyGKvXFiq7wYvLCPmFJgcneHsr5vTeJefe0SXtDE7qaur9ysv7giAc0CmEtQcS71UA5Q==}
+    engines: {node: '>= 12.17.0'}
+    hasBin: true
 
 snapshots:
 
@@ -1975,7 +1990,17 @@ snapshots:
     dependencies:
       '@dashkite/joy': 0.3.16
 
+  '@dashkite/genie-release@0.2.0':
+    dependencies:
+      '@dashkite/zephyr': 0.2.0
+      zx: 8.6.1
+
   '@dashkite/joy@0.3.16': {}
+
+  '@dashkite/zephyr@0.2.0':
+    dependencies:
+      '@dashkite/joy': 0.3.16
+      js-yaml: 4.1.0
 
   '@jridgewell/gen-mapping@0.3.8':
     dependencies:
@@ -2118,6 +2143,8 @@ snapshots:
       color-convert: 2.0.1
 
   arch@2.2.0: {}
+
+  argparse@2.0.1: {}
 
   babel-plugin-autocomplete-index@0.2.0(@babel/core@7.26.9):
     dependencies:
@@ -2408,6 +2435,10 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
+  js-yaml@4.1.0:
+    dependencies:
+      argparse: 2.0.1
+
   jsesc@3.0.2: {}
 
   jsesc@3.1.0: {}
@@ -2672,3 +2703,5 @@ snapshots:
   yallist@2.1.2: {}
 
   yallist@3.1.1: {}
+
+  zx@8.6.1: {}
