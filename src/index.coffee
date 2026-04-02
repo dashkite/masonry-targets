@@ -28,8 +28,11 @@ extension = ( extension ) ->
 
 copy = ( target ) ->
   Fn.tee ( context ) ->
-    FS.copyFile ( Path.source context ),
-      ( await Path.expand target, context )
+    try
+      await FS.copyFile ( Path.source context ),
+        ( await Path.expand target, context )
+    catch error
+      console.error error
 
 write = ( target ) ->
   Fn.tee ( context ) ->
