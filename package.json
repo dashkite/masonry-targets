@@ -31,18 +31,18 @@
     "release": "genie release"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.7",
-    "@babel/preset-env": "^7.29.7",
-    "@dashkite/amen": "^0.5.0",
-    "@dashkite/amen-console": "^0.4.0",
-    "@dashkite/assert": "^0.3.0",
-    "@dashkite/genie-release": "^0.5.15",
-    "@swc/cli": "^0.1.65",
-    "babel-plugin-autocomplete-index": "^0.2.0",
-    "coffeescript": "^2.7.0"
+    "@babel/core": "7.29.7",
+    "@babel/preset-env": "7.29.7",
+    "@dashkite/amen": "0.5.0",
+    "@dashkite/amen-console": "0.4.0",
+    "@dashkite/assert": "0.3.0",
+    "@dashkite/genie-release": "0.5.15",
+    "@swc/cli": "0.1.65",
+    "babel-plugin-autocomplete-index": "0.2.0",
+    "coffeescript": "2.7.0"
   },
   "dependencies": {
-    "@dashkite/joy": "^0.7.0",
-    "fast-glob": "^3.3.3"
+    "@dashkite/joy": "0.7.0",
+    "fast-glob": "3.3.3"
   }
 }
