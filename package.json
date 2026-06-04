@@ -42,7 +42,7 @@
     "coffeescript": "2.7.0"
   },
   "dependencies": {
-    "@dashkite/joy": "0.7.0",
+    "@dashkite/joy": "link:../joy",
     "fast-glob": "3.3.3"
   }
 }
